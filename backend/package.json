@@ -4,9 +4,17 @@
   "description": "Server for rushmore app",
   "main": "server.js",
   "scripts": {
-    "start": "",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^3.13.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1",
+    "path": "^0.12.7"
+  }
 }
