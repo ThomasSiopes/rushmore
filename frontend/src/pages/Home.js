@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Container } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 import SurveyOne from "../components/Survey1";
 
 function Home () {
@@ -43,9 +43,17 @@ function Home () {
         }]
     }
 
-    return <Container className="my-5">
-        <SurveyOne input={surveyJson}/>
-    </Container>
+    return <div className="text-white">
+        <div className="subSubNav text-end pe-5 font-comfortaa mb-4 py-2"><i>Home</i></div>
+        <Container className="font-nunito">
+            <h3 className="text-center">Title? Descriptive Text?</h3>
+            <Card>
+                <Card.Body>
+                    <SurveyOne input={surveyJson}/>
+                </Card.Body>
+            </Card>
+        </Container>
+    </div> 
 }
 
 export default Home;

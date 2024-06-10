@@ -1,0 +1,46 @@
+body, #root {
+    min-height: 100vh;
+}
+
+.bg-color {
+    background-color:#77B;
+}
+
+.bg-image {
+    background-image: url("../public/assets/images/rushmore.jpg");
+    background-position-x: center;
+    background-position-y: 17%;
+    background-size: cover;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    min-height: 28vh;
+}
+
+.font-comfortaa {
+    font-family: "Comfortaa", sans-serif;;
+    font-style: normal;
+}
+
+.font-nunito {
+    font-family: "Nunito", sans-serif;;
+    font-style: normal;
+}
+
+.subNavBar {
+    background-color: rgba(195,195,195,0.5);
+}
+
+.subNavBar a {
+    background-color: transparent;
+    text-decoration: none;
+    border-color: transparent;
+    color:#fff;
+}
+
+.subSubNav {
+    background-color: rgba(195,195,195,0.25);
+}
+
+.w-100 {
+    width:100%;
+}

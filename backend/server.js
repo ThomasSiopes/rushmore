@@ -1,6 +1,7 @@
 const express = require("express");
 const { ApolloServer } = require("apollo-server-express");
 const connectDB = require("./config/db");
+const routes = require("./routes/api/survey");
 const cors = require("cors");
 const path = require("path");
 const bodyParser = require("body-parser");
@@ -30,11 +31,13 @@ app.use(cors({origin:true, credentials:true}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
+app.use("/api/survey", routes);
+
 connectDB();
 
-app.use(express.static(path.join(__dirname, '../frontend/dist')))
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/dist/index.html'))
+    res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
 })
 
 const port = process.env.PORT || 4001;
